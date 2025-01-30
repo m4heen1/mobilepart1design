@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Sports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+          img {
+              max-width: 100%;
+              height: auto;
+              display: block;
+              margin: 0 auto;
+              width: 300px;
+}
+
+        #menu-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            background-color: #0055CC;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            display: none;
+        }
+
+        nav ul.open {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle">&#9776;</button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#news">Sport News</a></li>
+                <li><a href="#benefits">Positive Effects</a></li>
+                <li><a href="#tips">Tips & Tricks</a></li>
+                <li><a href="#soccer">Soccer</a></li>
+                <li><a href="#basketball">Basketball</a></li>
+                <li><a href="#tennis">Tennis</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+        <h1>Explore the Adventures of Sports</h1>
+        <p>Your ultimate guide to sports, tips, and benefits</p>
+    </header>
+    
+    <main>
+       <section id="news">
+            <h2>Latest Sports News</h2>
+            <img src="https://images.pond5.com/sports-news-broadcast-graphics-title-009938418_prevstill.jpeg" alt="Latest Sports News">
+            <p>Stay updated with the latest happenings in the sports world.</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </section>
+        </section>
+        <section id="benefits">
+            <h2>Positive Effects of Sports</h2>
+            <p>Sports bring numerous health and mental benefits, including improved cardiovascular health, better teamwork skills, and increased mental resilience.</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </section>
+        <section id="tips">
+            <h2>Tips and Tricks for Soccer</h2>
+            <p>Kick from the side of your foot in order to pass, maintain control by keeping the ball close, and always be aware of your positioning.</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </section>
+        <section id="soccer">
+            <h2>Soccer</h2>
+            <img src="https://www.nbc.com/sites/nbcblog/files/styles/scale_1280/public/2024/07/paris-2024-olympics-soccer.jpg" alt="Soccer">
+            <p><strong>History:</strong> Soccer, or football, originated in England in the 19th century and has grown into the most popular sport worldwide.</p>
+            <p><strong>Tips:</strong> Improve dribbling by practicing quick turns and close ball control. Develop accuracy in passing and shooting by consistently aiming at specific targets.</p>
+            <p><strong>Records:</strong> Brazil holds the record for the most FIFA World Cup wins.</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </section>
+        <section id="basketball">
+            <h2>Basketball</h2>
+            <img src="https://www.ncaa.org/images/2023/3/30/MBB-WBB_BallHoop.JPG" alt="Basketball">
+            <p><strong>History:</strong> Basketball was invented by Dr. James Naismith in 1891 as a way to keep athletes fit indoors.</p>
+            <p><strong>Tips:</strong> Work on your footwork, maintain proper shooting form, and develop a strong defensive stance to improve gameplay.</p>
+            <p><strong>Records:</strong> The USA holds the most Olympic gold medals in basketball history.</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </section>
+        <section id="tennis">
+            <h2>Tennis</h2>
+             <img src="https://plus.unsplash.com/premium_photo-1666913667082-c1fecc45275d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVubmlzfGVufDB8fDB8fHww" alt="Tennis">
+            <p><strong>History:</strong> Tennis has its origins in France and evolved into the modern sport in England during the 19th century.</p>
+            <p><strong>Tips:</strong> Master your serve by practicing different techniques, focus on improving endurance, and develop strong baseline shots for better gameplay.</p>
+            <p><strong>Records:</strong> Roger Federer holds multiple Grand Slam titles and is one of the greatest players in history.</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Created by [Maheen] | <a href="https://github.com/m4heen1/Mobilepart1">GitHub Repository</a></p>
+    </footer>
+    
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var nav = document.getElementById('navbar').querySelector('ul');
+            if (nav.style.display === 'block') {
+                nav.style.opacity = '0';
+                nav.style.transform = 'translateY(-10px)';
+                setTimeout(() => { nav.style.display = 'none'; }, 300);
+            } else {
+                nav.style.display = 'block';
+                setTimeout(() => {
+                    nav.style.opacity = '1';
+                    nav.style.transform = 'translateY(0)';
+                }, 10);
+            }
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
